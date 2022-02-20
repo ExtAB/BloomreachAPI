@@ -28,46 +28,6 @@ public class BookingStepDefinitions {
     private Bookingdates bookingdates;
     private List<Booking> bookingList = new ArrayList<>();
 
-/*
-
-    @Given("I have permissions to access the booking system")
-    public void iHavePermissionsToAccessTheBookingSystem() {
-    }
-
-    @When("I create a booking")
-    public void iCreateABooking(Datatable datatable) {
-        //It has to look something like this !!!
-        List<Map<String, String>> rows = table.asMaps(Booking.class, String.class);
-
-        //Something like this as well
-
-       for (Map<String, String> columns : rows) {
-           bookingList.add(new Booking(
-                   columns.get("firstName")
-                   , columns.get("lastName")
-                   , columns.get("totalPrice")
-                   , columns.get("depositPaid")
-                   , columns.get("checkIn")
-                   , columns.get("checkOut")
-                   , columns.get("aditionalNeeds")));
-       }
-
-    }
-
-    @And("I want to update the user {string} {string}")
-    public void iWantToUpdateTheUser(String firstName, String lastName) {
-    }
-
-    @And("I want to update an user {string} {string}")
-    public void iWantToUpdateAnUser(String firstName, String lastName) {
-    }
-
-    @Then("I want to delete booking {string} {string}")
-    public void iWantToDeleteBooking(String firstName, String lastName) {
-    }
-
-
- */
     @Given("user creates a booking with full name: {string} {string} that paid {string} euro, deposit paid  {string} that will check in from {string} and check out at {string} with specific needs of {string}")
     public void userCreatesABooking(String firstName, String lastName, String totalPrice, String depositPaid, String checkIn, String checkOut, String aditionalNeeds) {
         bookingdates = new Bookingdates(checkIn,checkOut);
