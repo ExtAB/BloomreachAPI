@@ -30,41 +30,51 @@ src/
 │  │  ├─ EnvironmentController.java
 │  │
 │  │  ├─ model/
-│  │  ├─ User.java
-│  │  ├─ Geo.java
-│  │  ├─ Company.java
-│  │  ├─ Address.java
-│  │  ├─ Comments.java
+│  │  ├─ Booking.java
+│  │  ├─ Bookingdates.java
+│  │  
+│  │  
+│  │  
 │  │
 │  │  ├─ resources/
 │  │  │  ├─ requestPayloads/
-│  │  │  ├─ validUserData.json
-│  │  │  ├─ inValidUserData.json
-│  │  │  ├─ updatedWrongUserData.json
-│  │  │  ├─ U[datedValidUserData.json
+│  │  │  ├─ admin.json
+│  │  │  ├─ validBookingData.json
+│  │  │  
+│  │  │  
 │  │
 │  │  ├─ restAPI/
 │  │  │  ├─ Endpoints.enum
-│  │  │  ├─ MobiquityClient.java
+│  │  │  ├─ BookingClient.java
 ├─ test/
 │  ├─ java/
 │  │  ├─ stepdefinitions/
-│  │  │  ├─ MobStepDef.java
+│  │  │  ├─ BookingStepDefinitions.java
 │  │  ├─ steps/
-│  │  │  ├─ MobSteps.java
+│  │  │  ├─ BookingSteps.java
 │  │  ├─ CucumberTestSuite.java
 │  │
 │  ├─ resources/
 │  │  ├─ features/
-│  │  │  ├─ Mobiquity.feature
+│  │  │  ├─ Booking.feature
 .gitattributes
 .gitignore
 pom.xml
 README.md
-Mobiquity.iml
 
 ```
-## 🚚 Roadmap
+## 🚚 Bugs
+API
+
+1. Get Booking By ID  is ignoring 'Accept' content type
+1.1 ID of Get is string but is generating only numeric values
+2. Create not filling the headers give error 500
+3. Create first name and last can accept numbers.
+4. Total price accepts string as numbers and returns null if sent text in total price.
+5. Boolean is default true, sending a string is creating true. Additional needs accepts numeric and string type. Checking accepts future dates, checkin accepts unique characters and returns 200 status code  with invalid page
+6. Update changing the name sirname to digit server error 500
+7. PartialUpdateBooking Always returns method not allowed, even though done identical as the example given
+8. Delete is returning 201 with response create instead of successfully deleted
 
 [Assignment thoughts](https://www.notion.so/Assignment-thoughts-f136790b32d4435a9ffad08a5f883a2d)
 
