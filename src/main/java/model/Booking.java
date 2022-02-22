@@ -9,12 +9,12 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Booking {
-	private String firstname;
-	private String lastname;
-	private int totalprice;
-	private boolean depositpaid;
-	private Bookingdates bookingdates;
-	private String additionalneeds;
+	String firstname;
+	String lastname;
+	int totalprice;
+	boolean depositpaid;
+	Bookingdates bookingdates;
+	String additionalneeds;
 
 	public static Booking createBookingObject(String firstname, String lastname, String totalPrice, String depositpaid, Bookingdates bookingDates, String additionalneeds){
 		return new Booking(firstname,lastname,Integer.parseInt(totalPrice),Boolean.parseBoolean(depositpaid),bookingDates,additionalneeds);

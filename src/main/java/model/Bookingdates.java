@@ -9,6 +9,6 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Bookingdates{
-	private String checkin;
-	private String checkout;
+	String checkin;
+	String checkout;
 }
