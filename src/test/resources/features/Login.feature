@@ -9,7 +9,7 @@ Feature: Login
       | Role          | Username | Password | Language |
       | Author        | author07 | author07 | English  |
       | Editor        | editor19 | editor19 | Deutsch  |
-      | Administrator | admin03  | admin03  | X        |
+      | Administrator | admin03  | admin03  | English  |
 
 #    Scenario: negative
 #      Given I login with Author
@@ -17,3 +17,4 @@ Feature: Login
 #      Then I should not be able to
 
 
+#    Scenarios for Home, DocumentSearch, ContentReports, ExperienceManager, Setup(Admin), etc....

@@ -10,7 +10,7 @@ import static javax.servlet.http.HttpServletResponse.SC_NOT_FOUND;
 import static net.serenitybdd.rest.SerenityRest.then;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BookingSteps {
+public class BookingSteps{
 
     @Steps
     BookingClient bookingClient;

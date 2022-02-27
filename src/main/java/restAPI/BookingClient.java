@@ -27,7 +27,8 @@ public class BookingClient {
                 .header("Accept","application/json")
                 .body(jsonObject)
                 .post(baseURL + Endpoints.BOOKING.getPath());
-        setSessionVariable("bookingID").to(SerenityRest.lastResponse().jsonPath().get("bookingID"));
+        
+        setsessionVariableCalled("bookingID").to(SerenityRest.lastResponse().jsonPath().get("bookingID"));
     }
 
 

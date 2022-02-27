@@ -34,7 +34,6 @@ public class BookingStepDefinitions {
         booking = createBookingObject(firstName,lastName,totalPrice,depositPaid,bookingdates,aditionalNeeds);
         jsonObject = EnvironmentController.serializeJsonBooking(booking);
         bookingSteps.createBooking(jsonObject);
-        //request
     }
 
     @When("a mistaken is identified that name of the client should have been Dee {string} and properly edited")
